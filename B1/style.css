@@ -1,0 +1,45 @@
+section {
+  margin: 50px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  border: none;
+  padding: 16px 32px;
+  font-size: 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  overflow: visible; /* biar partikel bisa keluar */
+  position: relative;
+}
+
+.particle-btn {
+  color: #fff;
+  background: #ff598c;
+  position: relative;
+}
+
+/* Partikel berwarna pink */
+.particle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #ff598c;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: explode 700ms ease-out forwards;
+}
+
+/* Animasikan partikel ke luar */
+@keyframes explode {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--x), var(--y)) scale(0.5);
+  }
+}
