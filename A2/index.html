@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indonesian Paradise: Explore Top Destinations</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Navigation */
+        .navbar {
+            background-color: #003d66;
+            color: white;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-icon {
+            margin-right: 10px;
+            font-size: 28px;
+        }
+        
+        .menu {
+            display: flex;
+        }
+        
+        .menu-item {
+            margin-left: 20px;
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        .menu-item:hover {
+            background-color: #0056b3;
+        }
+        
+        /* Header */
+        .header {
+            padding: 60px 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/api/placeholder/1200/400') center/cover no-repeat;
+            color: white;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .header p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Destinations */
+        .destinations {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 32px;
+            color: #003d66;
+        }
+        
+        .destinations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .destination-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .destination-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .destination-image {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+        
+        .destination-content {
+            padding: 20px;
+        }
+        
+        .destination-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #003d66;
+        }
+        
+        .destination-description {
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        .destination-meta {
+            display: flex;
+            margin-bottom: 15px;
+            color: #777;
+            font-size: 14px;
+        }
+        
+        .meta-item {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+        
+        .meta-icon {
+            margin-right: 5px;
+        }
+        
+        .read-more {
+            display: inline-block;
+            background-color: #003d66;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+        
+        .read-more:hover {
+            background-color: #0056b3;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: #003d66;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .footer-links {
+            margin-top: 20px;
+        }
+        
+        .footer-link {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        
+        .footer-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container container">
+            <a href="#" class="logo">
+                <span class="logo-icon">✈️</span>
+                Indonesian Paradise
+            </a>
+            <div class="menu">
+                <a href="#" class="menu-item">Home</a>
+                <a href="#" class="menu-item">Destinations</a>
+                <a href="#" class="menu-item">About</a>
+                <a href="#" class="menu-item">Contact</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1>Discover the Beauty of Indonesia</h1>
+            <p>Explore breathtaking destinations across the Indonesian archipelago, from pristine beaches to majestic mountains and cultural wonders.</p>
+        </div>
+    </header>
+    
+    <!-- Featured Destinations -->
+    <section class="destinations">
+        <div class="container">
+            <h2 class="section-title">Featured Destinations</h2>
+            <div class="destinations-grid">
+                <!-- Destination 1 -->
+                <div class="destination-card">
+                    <img src="Pura Besakih.jpg" alt="Bali - Pura Besakih" class="destination-image">
+                    <div class="destination-content">
+                        <h3 class="destination-title">Pura Besakih, Bali</h3>
+                        <p class="destination-description">Bali's largest and most sacred temple complex located on the slopes of Mount Agung. Known for its stunning architecture and spiritual significance.</p>
+                        <div class="destination-meta">
+                            <div class="meta-item">
+                                <span class="meta-icon">👁️</span>
+                                3,456 views
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-icon">💬</span>
+                                128 comments
+                            </div>
+                        </div>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </div>
+                
+                <!-- Destination 2 -->
+                <div class="destination-card">
+                    <img src="Kepulauan Derawan.jpg" alt="Derawan Islands" class="destination-image">
+                    <div class="destination-content">
+                        <h3 class="destination-title">Kepulauan Derawan</h3>
+                        <p class="destination-description">A paradise archipelago in East Kalimantan featuring crystal clear waters, white sandy beaches, and world-class diving spots with breathtaking marine life.</p>
+                        <div class="destination-meta">
+                            <div class="meta-item">
+                                <span class="meta-icon">👁️</span>
+                                2,873 views
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-icon">💬</span>
+                                94 comments
+                            </div>
+                        </div>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </div>
+                
+                <!-- Destination 3 -->
+                <div class="destination-card">
+                    <img src="Danau Toba.jpg" alt="Lake Toba" class="destination-image">
+                    <div class="destination-content">
+                        <h3 class="destination-title">Danau Toba, Sumatra</h3>
+                        <p class="destination-description">The largest volcanic lake in Southeast Asia and one of the world's deepest lakes, featuring stunning landscapes and the cultural heritage of Batak people.</p>
+                        <div class="destination-meta">
+                            <div class="meta-item">
+                                <span class="meta-icon">👁️</span>
+                                4,217 views
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-icon">💬</span>
+                                156 comments
+                            </div>
+                        </div>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>© 2025 Indonesian Paradise. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#" class="footer-link">Privacy Policy</a>
+                    <a href="#" class="footer-link">Terms of Service</a>
+                    <a href="#" class="footer-link">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
