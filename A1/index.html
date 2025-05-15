@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Pricing</title>
+</head>
+<body>
+<div class="pricing-container">
+    <h1>Choose Your Plan</h1>
+    
+    <div class="pricing-tables">
+        <!-- Silver Pack -->
+        <div class="pricing-table">
+            <div class="pricing-header">
+                <h2>Silver Pack</h2>
+                <div class="price">$4<span>/month</span></div>
+            </div>
+            <ul class="features">
+                <li>Deploy in seconds</li>
+                <li>Scale up on demand</li>
+                <li>Run any workload - from mission critical apps to low traffic sites</li>
+            </ul>
+            <button class="purchase-btn">Get Started</button>
+        </div>
+        
+        <!-- Gold Pack -->
+        <div class="pricing-table featured">
+            <div class="pricing-header">
+                <h2>Gold Pack</h2>
+                <div class="price">$12<span>/month</span></div>
+            </div>
+            <ul class="features">
+                <li>Simple, managed Kubernetes built for scale</li>
+                <li>Free control plane, free bandwidth allowance, and more</li>
+                <li>Automate and optimize to peak performance</li>
+            </ul>
+            <button class="purchase-btn">Get Started</button>
+        </div>
+        
+        <!-- Platinum Pack -->
+        <div class="pricing-table">
+            <div class="pricing-header">
+                <h2>Platinum Pack</h2>
+                <div class="price">$30<span>/month</span></div>
+            </div>
+            <ul class="features">
+                <li>Build, deploy and scale apps quickly</li>
+                <li>Fully managed solution, zero infrastructure management</li>
+                <li>Highly scalable</li>
+            </ul>
+            <button class="purchase-btn">Get Started</button>
+        </div>
+    </div>
+</div>
+
+    <style>
+    .pricing-container {
+        font-family: 'Arial', sans-serif;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        text-align: center;
+    }
+    
+    .pricing-container h1 {
+        color: #333;
+        margin-bottom: 40px;
+        font-size: 2.5rem;
+    }
+    
+    .pricing-tables {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    
+    .pricing-table {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        padding: 30px;
+        width: 300px;
+        transition: transform 0.3s;
+    }
+    
+    .pricing-table:hover {
+        transform: translateY(-10px);
+    }
+    
+    .pricing-table.featured {
+        border: 2px solid #FFD700;
+        position: relative;
+    }
+    
+    .pricing-header {
+        margin-bottom: 25px;
+    }
+    
+    .pricing-header h2 {
+        color: #333;
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+    
+    .price {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #2C3E50;
+    }
+    
+    .price span {
+        font-size: 1rem;
+        color: #7F8C8D;
+    }
+    
+    .features {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 30px;
+        text-align: left;
+    }
+    
+    .features li {
+        padding: 10px 0;
+        border-bottom: 1px solid #ECF0F1;
+        color: #555;
+    }
+    
+    .purchase-btn {
+        background: #3498DB;
+        color: white;
+        border: none;
+        padding: 12px 30px;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background 0.3s;
+        width: 100%;
+    }
+    
+    .purchase-btn:hover {
+        background: #2980B9;
+    }
+    
+    .featured .purchase-btn {
+        background: #FFD700;
+        color: #333;
+    }
+    
+    .featured .purchase-btn:hover {
+        background: #F1C40F;
+    }
+    
+    </style>
+</body>
+</html>
