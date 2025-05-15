@@ -18,7 +18,6 @@ if(isset($_POST['create'])){
     $htmlToDoc = new  HTML_TO_DOC();   
     $htmlContent = parseHtml($title, $description); 
     $htmlToDoc->createDoc($htmlContent, $title, true); 
-
 }
 
 function parseHtml($title, $description){
