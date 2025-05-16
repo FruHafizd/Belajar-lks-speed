@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Shooter</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="welcome">
+        <img src="Sprites/shooter.png" alt="Game Logo" class="logo" />
+        <input
+          type="text"
+          placeholder="Input username"
+          name="name"
+          id="input"
+          required
+          aria-label="Username"
+        />
+        <select name="level" id="level" required aria-label="Select difficulty level">
+          <option value="" disabled selected>Select Level</option>
+          <option value="30">Easy</option>
+          <option value="20">Medium</option>
+          <option value="15">Hard</option>
+        </select>
+        <div class="choices" role="radiogroup" aria-label="Select gun">
+          <label class="gun1">
+            <img src="Sprites/gun1.png" alt="First gun option" />
+            <input type="radio" name="gun" id="gun1" value="true" required />
+          </label>
+          <label class="gun2">
+            <img src="Sprites/gun2.png" alt="Second gun option" />
+            <input type="radio" name="gun" id="gun2" value="false" required />
+          </label>
+        </div>
+        <div class="choices" role="radiogroup" aria-label="Select target">
+          <div class="target1">
+            <img src="Sprites/target1.png" alt="First target option" />
+            <input type="radio" name="target" value="1" id="target1" required />
+          </div>
+          <div class="target2">
+            <img src="Sprites/target2.png" alt="Second target option" />
+            <input type="radio" name="target" value="2" id="target2" required />
+          </div>
+          <div class="target3">
+            <img src="Sprites/target3.png" alt="Third target option" />
+            <input type="radio" name="target" value="3" id="target3" required />
+          </div>
+        </div>
+
+        <div class="choices">
+          <button class="play" onclick="play()" id="playButton" disabled aria-label="Play Game">
+            Play Game
+          </button>
+          <button class="instruction" onclick="showInstruction()" aria-label="Show Instructions">
+            Instructions
+          </button>
+        </div>
+
+        <div class="show-error hide" id="error-message" role="alert">
+          <small style="color: red;">Fill all the form before playing the game!</small>
+        </div>
+      </div>
+      <div class="instructBoard hide" role="dialog" aria-labelledby="instructionTitle">
+        <div class="text-plain">
+          <h2 id="instructionTitle">How to play game</h2>
+          <p>1. Input username</p>
+          <p>2. Point the pointer at the target</p>
+          <p>3. Click to shoot</p>
+          <p>4. Get as many points as possible</p>
+          <p>5. Enjoy!</p>
+        </div>
+        <div
+          class="close"
+          onclick="document.querySelector('.instructBoard').classList.add('hide');"
+          aria-label="Close instructions"
+        >
+          ❌
+        </div>
+      </div>
+    </div>
+    <div class="game hide">
+      <div class="bg">
+        <div class="alert hide" id="pause" role="dialog" aria-labelledby="pauseTitle">
+          <h2 id="pauseTitle">Game Paused</h2>
+          <button onclick="togglePause()" aria-label="Continue game">Continue</button>
+        </div>
+      </div>
+      <div class="bg">
+        <div class="alert hide" id="gameOver" role="dialog" aria-labelledby="gameOverTitle">
+          <h2 id="gameOverTitle">Game Over</h2>
+          <p id="playerNameOver">Name</p>
+          <p id="scoreOver">Score</p>
+          <div class="choices">
+            <button onclick="main()" aria-label="Restart game">Restart</button>
+            <button id="saveScoreBtn" aria-label="Save score">Save Score</button>
+          </div>
+        </div>
+      </div>
+      <div class="board">
+        <div class="header">
+          <span><b id="playerTxt">Player Name</b></span>
+          <span><b id="scoreTxt">Score: 0</b></span>
+          <span><b id="timeTxt">Time: 30</b></span>
+        </div>
+        <h1 class="count">3</h1>
+        <img src="Sprites/pointer.png" alt="Targeting pointer" class="pointer" />
+        <img src="Sprites/gun1.png" alt="Game weapon" class="gun" />
+      </div>
+      <div class="leaderboard">
+        <h2>Leaderboard</h2>
+        <label for="sort">
+          <select name="sort" id="sort" aria-label="Sort leaderboard">
+            <option selected disabled>Sort By</option>
+            <option value="time">Last Match</option>
+            <option value="score">Score</option>
+          </select>
+        </label>
+        <div class="body" id="leaderboardSection" style="margin-top: 20px;" role="list" aria-label="Leaderboard entries"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
